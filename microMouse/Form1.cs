@@ -56,17 +56,16 @@ namespace WindowsApplication1
 
             if (mapa.GetPixel(punkt.X + 1 , punkt.Y).R == 0&&prevPoint.X!=punkt.X+1)
             {   //1
-                //  mapa = original
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
-              punkt.X = punkt.X + 1 ;
-               // MessageBox.Show("ASDasdasd");
+
+                punkt.X = punkt.X + 1;
             }
             else if (mapa.GetPixel(punkt.X + 1, punkt.Y + 1).R == 0 && mapa.GetPixel(punkt.X + 1, punkt.Y + 1).G == 0 && mapa.GetPixel(punkt.X + 1, punkt.Y + 1).B == 0 && prevPoint.X != punkt.X+1&&prevPoint.Y!=punkt.Y+1)
             {   //2
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
-                //mapa = original;
+
                 punkt.X = punkt.X + 1;
                 punkt.Y = punkt.Y + 1;
             }
@@ -75,6 +74,7 @@ namespace WindowsApplication1
                 //  mapa = original;
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
+
                 punkt.X = punkt.X;
                 punkt.Y = punkt.Y + 1;
             }
@@ -83,6 +83,7 @@ namespace WindowsApplication1
                 //  mapa = original;
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
+
                 punkt.X = punkt.X - 1;
                 punkt.Y = punkt.Y + 1;
             }
@@ -91,6 +92,7 @@ namespace WindowsApplication1
                 //   mapa = original;
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
+
                 punkt.X = punkt.X - 1;
                 punkt.Y = punkt.Y;
             }
@@ -99,6 +101,7 @@ namespace WindowsApplication1
                 //  mapa = original;
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
+
                 punkt.X = punkt.X - 1;
                 punkt.Y = punkt.Y - 1;
             }
@@ -115,18 +118,12 @@ namespace WindowsApplication1
                 //    mapa = original;
                 prevPoint.X = punkt.X;
                 prevPoint.Y = punkt.Y;
+
                 punkt.X = punkt.X + 1;
                 punkt.Y = punkt.Y - 1;
             }
-            //else MessageBox.Show("asd");
-          //  MessageBox.Show("hello");
+
             narysuj_cos();
-          /*  mapa = original;
-            pictureBox1.Image = mapa;
-            Color pixelcolor = mapa.GetPixel(0, 0);
-            MessageBox.Show(pixelcolor.ToString());
-           /* if (mapa.GetPixel(0, 0).R == 255&&)
-                MessageBox.Show("hello");*/
         }
 
         private void button2_Click(object sender, EventArgs e)
